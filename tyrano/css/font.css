@@ -1,0 +1,16 @@
+/*ウェブフォントを使用する場合はここに定義を追加して下さい*/
+
+
+    
+@font-face {
+	font-family:"main";
+	src:url("../../data/others/cinecaption227.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"min";
+	src:url("../../data/others/pixelmplus-12-bold.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
