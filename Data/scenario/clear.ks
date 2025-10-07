@@ -71,17 +71,17 @@ f.nowPlace = "f1_rouka"
 
 //アイテム
 f.itemData ={
-    letter: {
-        jaName: "招待状",
+    tv: {
+        jaName: "テレビ",
         image: "card/item/letter.png",
         get: 1
     },
-    aru_key: {
-        jaName: "部屋の鍵（ある）",
+    pring: {
+        jaName: "プリン",
         image: "card/item/aru_key.png",
         get: 1
     },
-    yuki_key: {
+    sa: {
         jaName: "部屋の鍵（ユキ）",
         image: "card/item/yuki_key.png",
         get: 1

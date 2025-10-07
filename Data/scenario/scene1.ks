@@ -12,7 +12,7 @@
 ;メニューボタンの表示
 ;@showmenubutton
 
-;@jump target="*skip"
+@jump target="*skip"
 
 
 @wai time="1000"
@@ -70,9 +70,9 @@
 いったい誰が……[sp]
 @chat_name chara="mikan"
 許せない……[sp]
-頑張って用意したケーキを食べるなんて、[w][r]
+頑張って用意したケーキを食べるなんて、[sw][r]
 友達だとしても許せない……[sp]
-私の名にかけて、[w][r]
+私の名にかけて、[sw][r]
 犯人を見つけ出す！[sp]
 ええ～っ！？[sp]
 
@@ -106,9 +106,25 @@
 
 @if exp="f.ev_ima != 1"
 [winame]
-@chat_name chara="aru"
-い、[sw]いや！[w][r]
-全然平気ですから！[sp]
+@chat_name chara="mikan"
+……[w]誰だ……[w][r]
+いったい誰が……！[sp]
+@chat_name chara="sabaru"
+ひええ、[sw]大変なことになっちゃった！[sp]
+@chat_name chara="ayashi"
+ごめんね、[sw]そらみ。[sp]
+みかん、[sw]この日のために沢山準備してきてたから……[l][r]
+だいぶショックなんだと思う。[sp]
+@chat_name chara="sora"
+うん……[l]あれ、[sw]ろきさは？[sp]
+@chat_name chara="ayashi"
+キッチンの方に向かったよ。[sp]
+じゃあ、[sw]自分もいろいろ見てくるよ。[l][r]
+なんかあったら呼びに来て。[sp]
+@chat_name chara="sora"
+（心苦しいけど……[w][r]
+調査、[sw]してみるか……）[sp]
+
 @hidemess
 @eval exp="f.select_item = 0"
 @eval exp="f.ev_ima = 1"
@@ -119,50 +135,51 @@
 
 ;探索箇所設定
 ;カーテン
-[locate x="0" y="0"]
-[clickable  opacity="0" storage="&f.target_ad" width="80" height="210" target="*ima_0" ]
-[locate x="80" y="0"]
-[clickable  opacity="0" storage="&f.target_ad" width="104" height="259" target="*ima_0" ]
+[locate x="205" y="23"]
+[clickable opacity="0" storage="&f.target_ad" width="80" height="210" target="*ima_0"]
+[locate x="285" y="23"]
+[clickable opacity="0" storage="&f.target_ad" width="104" height="259" target="*ima_0"]
 
 ;白いなにか
-[locate x="12" y="209"]
-[clickable opacity="0"  storage="&f.target_ad" width="68" height="53" target="*ima_1" ]
+[locate x="217" y="232"]
+[clickable opacity="0" storage="&f.target_ad" width="68" height="53" target="*ima_1"]
 
 ;本棚
-[locate x="217" y="68"]
-[clickable opacity="0"  storage="&f.target_ad" width="162" height="121" target="*ima_2" ]
-[locate x="217" y="189"]
-[clickable opacity="0"  storage="&f.target_ad" width="131" height="74" target="*ima_2" ]
+[locate x="422" y="91"]
+[clickable opacity="0" storage="&f.target_ad" width="162" height="121" target="*ima_2"]
+[locate x="422" y="212"]
+[clickable opacity="0" storage="&f.target_ad" width="131" height="74" target="*ima_2"]
 
-;テレビの前のシェルフ
-[locate x="348" y="189"]
-[clickable opacity="0"  storage="&f.target_ad" width="80" height="86" target="*ima_3" ]
+;ミニ机
+[locate x="553" y="212"]
+[clickable opacity="0" storage="&f.target_ad" width="80" height="86" target="*ima_3"]
 
 ;テレビ
-[locate x="441" y="53"]
-[clickable opacity="0"  storage="&f.target_ad" width="189" height="155" target="*ima_4" ]
+[locate x="646" y="76"]
+[clickable opacity="0" storage="&f.target_ad" width="189" height="155" target="*ima_4"]
 
 ;テレビの前のかばん
-[locate x="514" y="262"]
-[clickable opacity="0"  storage="&f.target_ad" width="86" height="63" target="*ima_5" ]
+[locate x="719" y="285"]
+[clickable opacity="0" storage="&f.target_ad" width="86" height="63" target="*ima_5"]
 
 ;クッション
-[locate x="321" y="358"]
-[clickable opacity="0"  storage="&f.target_ad" width="239" height="123" target="*ima_6" ]
+[locate x="526" y="381"]
+[clickable opacity="0" storage="&f.target_ad" width="239" height="123" target="*ima_6"]
 
 ;犬ハウス
-[locate x="600" y="208"]
-[clickable opacity="0"  storage="&f.target_ad" width="270" height="146" target="*ima_7" ]
-[locate x="630" y="187"]
-[clickable opacity="0"  storage="&f.target_ad" width="240" height="21" target="*ima_7" ]
+[locate x="805" y="231"]
+[clickable opacity="0" storage="&f.target_ad" width="270" height="146" target="*ima_7"]
+[locate x="835" y="210"]
+[clickable opacity="0" storage="&f.target_ad" width="240" height="21" target="*ima_7"]
 
 ;犬ハウスの上
-[locate x="636" y="135"]
-[clickable opacity="0"  storage="&f.target_ad" width="234" height="45" target="*ima_8" ]
+[locate x="841" y="158"]
+[clickable opacity="0" storage="&f.target_ad" width="234" height="45" target="*ima_8"]
 
 ;ぬいぐるみ
-[locate x="709" y="40"]
-[clickable opacity="0"  storage="&f.target_ad" width="100" height="89" target="*ima_9" ]
+[locate x="914" y="63"]
+[clickable opacity="0" storage="&f.target_ad" width="100" height="89" target="*ima_9"]
+
 [s]
 
 

@@ -34,7 +34,8 @@ f.infoData[mp.id].get = 1
 @endscript
 [endmacro]
 
-[macro name=getitem]
+[macro name=iget]
+@playse storage="itemgetsea.ogg"
 @iscript
 f.itemData[mp.id].get = 1
 @endscript
