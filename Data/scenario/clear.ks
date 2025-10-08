@@ -32,11 +32,10 @@
 @chara_new name="sora" storage="chara/mikan/default.png" jname="そらみ"
 @chara_new name="mikan" storage="chara/mikan/default.png" jname="みかん"
 @chara_new name="ayashi" storage="chara/mikan/default.png" jname="あやし"
-@chara_new name="rokisa" storage="chara/Aru/default.png" jname="ろきさ"
+@chara_new name="rokisa" storage="chara/mikan/default.png" jname="ろきさ"
 @chara_new name="sabaru" storage="chara/mikan/default.png" jname="さばる"
 
 
-@chara_new name="rosaki" storage="chara/Rosaki/normal.png" jname="露崎・ロ・木崎"
 
 
 [eval exp="f.local1 = 0"]
@@ -120,14 +119,14 @@ f.personData ={
     }
 }
 //人物No.
-f.personNum =["yuki","aru","rosaki",3]
+f.personNum =["mikan","sabaru","rokisa","ayashi"]
 
 f.select_person = 0
 
 f.storyData =["みかんの家を調査しよう。"]
 f.story = f.storyData[0]
 f.taskData ={
-    0: ["他の３人に話しかけよう","部屋を見に行こう"]
+    0: ["居間を調査する","キッチンを調査する"]
 }
 
 [endscript]
