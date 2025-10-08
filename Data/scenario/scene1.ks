@@ -124,7 +124,6 @@
 @chat_name chara="sora"
 （心苦しいけど……[w][r]
 調査、[sw]してみるか……）[sp]
-
 @hidemess
 @eval exp="f.select_item = 0"
 @eval exp="f.ev_ima = 1"
