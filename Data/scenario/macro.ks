@@ -247,30 +247,31 @@ tf.i = -1
 @eval exp="f.chara_mode_j = 'そらみ'"
 
 @if exp="f.mode == 's'"
-@eval exp="f.mode_j = '調査'"
-@cursor_search
-[eval exp="tf.file6 = 'card/search.png'"]
+    @eval exp="f.mode_j = '調査'"
+    @cursor_search
+    [eval exp="tf.file6 = 'card/search.png'"]
 @elsif exp="f.mode == 'u'"
-@eval exp="f.mode_j = '使用'"
-[eval exp="tf.file6 = 'card/use.png'"]
+    @eval exp="f.mode_j = '使用'"
+    [eval exp="tf.file6 = 'card/use.png'"]
 @elsif exp="f.mode == 't'"
-@eval exp="f.mode_j = '特殊'"
-@eval exp="tf.file6 = f.local"
+    @eval exp="f.mode_j = '特殊'"
+    @eval exp="tf.file6 = f.local"
 @endif
+
 @if exp="f.item_mode == 0"
-@eval exp="f.item_mode_j = '手がかり'"
-[eval exp="tf.file7 = 'card/item.png'"]
-;select_item_jを取得
-@eval exp="f.select_item_j = f.itemData[f.itemNum[f.select_item]].jaName"
-;select_item imageを取得
-[eval exp="tf.file4 = f.itemData[f.itemNum[f.select_item]].image"]
+    @eval exp="f.item_mode_j = '手がかり'"
+    [eval exp="tf.file7 = 'card/item.png'"]
+    ;select_item_jを取得
+    @eval exp="f.select_item_j = f.itemData[f.itemNum[f.select_item]].jaName"
+    ;select_item imageを取得
+    [eval exp="tf.file4 = f.itemData[f.itemNum[f.select_item]].image"]
 @else
-@eval exp="f.item_mode_j = '人物'"
-[eval exp="tf.file7 = 'card/person.png'"]
-;select_item_jを取得
-@eval exp="f.select_item_j = f.personData[f.personNum[f.select_person]].jaName"
-;select_item imageを取得
-[eval exp="tf.file4 = f.personData[f.personNum[f.select_person]].image"]
+    @eval exp="f.item_mode_j = '人物'"
+    [eval exp="tf.file7 = 'card/person.png'"]
+    ;select_item_jを取得
+    @eval exp="f.select_item_j = f.personData[f.personNum[f.select_person]].jaName"
+    ;select_item imageを取得
+    [eval exp="tf.file4 = f.personData[f.personNum[f.select_person]].image"]
 @endif
 
 ;左上の文字のフォント

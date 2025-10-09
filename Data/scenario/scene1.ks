@@ -105,29 +105,29 @@
 [bgadv st="ima.png"]
 
 @if exp="f.ev_ima != 1"
-[winame]
-@chat_name chara="mikan"
-……[w]誰だ……[w][r]
-いったい誰が……！[sp]
-@chat_name chara="sabaru"
-ひええ、[sw]大変なことになっちゃった！[sp]
-@chat_name chara="ayashi"
-ごめんね、[sw]そらみ。[sp]
-みかん、[sw]この日のために沢山準備してきてたから……[l][r]
-だいぶショックなんだと思う。[sp]
-@chat_name chara="sora"
-うん……[l]あれ、[sw]ろきさは？[sp]
-@chat_name chara="ayashi"
-キッチンの方に向かったよ。[sp]
-じゃあ、[sw]自分もいろいろ見てくるよ。[l][r]
-なんかあったら呼びに来て。[sp]
-@chat_name chara="sora"
-（心苦しいけど……[w][r]
-調査、[sw]してみるか……）[sp]
+    [winame]
+    @chat_name chara="mikan"
+    ……[w]誰だ……[w][r]
+    いったい誰が……！[sp]
+    @chat_name chara="sabaru"
+    ひええ、[sw]大変なことになっちゃった！[sp]
+    @chat_name chara="ayashi"
+    ごめんね、[sw]そらみ。[sp]
+    みかん、[sw]この日のために沢山準備してきてたから……[l][r]
+    だいぶショックなんだと思う。[sp]
+    @chat_name chara="sora"
+    うん……[l]あれ、[sw]ろきさは？[sp]
+    @chat_name chara="ayashi"
+    キッチンの方に向かったよ。[sp]
+    じゃあ、[sw]自分もいろいろ見てくるよ。[l][r]
+    なんかあったら呼びに来て。[sp]
+    @chat_name chara="sora"
+    （心苦しいけど……[w][r]
+    調査、[sw]してみるか……）[sp]
 
-@hidemess
-@eval exp="f.select_item = 0"
-@eval exp="f.ev_ima = 1"
+    @hidemess
+    @eval exp="f.select_item = 0"
+    @eval exp="f.ev_ima = 1"
 @endif
 
 *ima_prc
@@ -189,12 +189,12 @@
 [bgadv st="kittin.png"]
 
 @if exp="f.ev_kittin != 1"
-[winame]
-@chat_name chara="yuki"
-おお……すごい！[sp]
-@chara_hide_all layer="3"
-@hidemess
-@eval exp="f.ev_kittin = 1"
+    [winame]
+    @chat_name chara="yuki"
+    おお……すごい！[sp]
+    @chara_hide_all layer="3"
+    @hidemess
+    @eval exp="f.ev_kittin = 1"
 @endif
 
 *kittin_prc

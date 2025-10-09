@@ -37,27 +37,26 @@
 @playse storage="カーソル移動2.mp3"
 [clearcards]
 [if exp="f.item_mode == 0"]
-@eval exp="f.select_item -= 1"
-@if exp="f.select_item < 0"
-@eval exp="f.select_item = f.itemNum.length - 1"
+    @eval exp="f.select_item -= 1"
+@elsif exp="f.select_item < 0"
+    @eval exp="f.select_item = f.itemNum.length - 1"
 @endif
 
 *item_up_loop
 @if exp="f.itemData[f.itemNum[f.select_item]].get == 0"
-@eval exp="f.select_item -= 1"
-;[winame]手に入れてないので[emb exp="selectitem"]にします[sp][hidemess]
-@jump target="*item_up_loop"
-@endif
+    @eval exp="f.select_item -= 1"
+    ;[winame]手に入れてないので[emb exp="selectitem"]にします[sp][hidemess]
+    @jump target="*item_up_loop"
 [else]
-@eval exp="f.select_person -= 1"
-@if exp="f.select_person < 0"
-@eval exp="f.select_person = f.personNum.length - 1"
-@endif
-*person_up_loop
-@if exp="f.personData[f.personNum[f.select_person]].get == 0"
-@eval exp="f.select_person -= 1"
-@jump target="*person_up_loop"
-@endif
+    @eval exp="f.select_person -= 1"
+    @if exp="f.select_person < 0"
+        @eval exp="f.select_person = f.personNum.length - 1"
+    @endif
+    *person_up_loop
+    @if exp="f.personData[f.personNum[f.select_person]].get == 0"
+        @eval exp="f.select_person -= 1"
+        @jump target="*person_up_loop"
+    @endif
 [endif]
 @jump target="*end" 
 

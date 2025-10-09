@@ -16,12 +16,12 @@
 みかんの飼っている犬だ。[l][r]
 名前はきなこというらしい。[sp]
 @if exp="f.ima_1_ev != 1"
-@chat_name chara="sabaru"
-かわいい～。[sp]
-@chat_name chara="sora"
-かわいい……[l][r]
-それにしても、よく吠えるなぁ。[sp]
-@eval exp="f.ima_1_ev = 1"
+    @chat_name chara="sabaru"
+    かわいい～。[sp]
+    @chat_name chara="sora"
+    かわいい……[l][r]
+    それにしても、よく吠えるなぁ。[sp]
+    @eval exp="f.ima_1_ev = 1"
 @endif
 @jump target="*end" 
 
@@ -63,12 +63,12 @@
 勉強道具やテキストが置いてある。[l][r]
 ……[w]あまり進んでいないようだ。[sp]
 @if exp="f.ima_3_ev != 1"
-@chat_name chara="mikan"
-ゲームの合間にやろうと思ってるんだけど、[r]
-全然進まなくて……[sp]
-@chat_name chara="sabaru"
-わかる～。[sp]
-@eval exp="f.ima_3_ev = 1"
+    @chat_name chara="mikan"
+    ゲームの合間にやろうと思ってるんだけど、[r]
+    全然進まなくて……[sp]
+    @chat_name chara="sabaru"
+    わかる～。[sp]
+    @eval exp="f.ima_3_ev = 1"
 @endif
 @jump target="*end"
 
@@ -81,40 +81,38 @@
 テレビだ。[l][r]
 隣にはゲーム機やらが置かれている。[sp]
 @if exp="f.ima_4_ev != 1"
-@chat_name chara="sabaru"
-そういえば、[sw][r]
-例の録画は見れたの？[sp]
-@chat_name chara="mikan"
-ああ、[sw]おかげさまでね。[sp]
-@chat_name chara="sora"
-なんの話？[sp]
-@chat_name chara="mikan"
-毎週欠かさず見てるスイーツ番組があるんだけど、[sw][r]
-昨日は準備で忙しくて見れなかったの。[sp]
-だから、[sw]ちょうどスケジュールの空いた今日の4時に見るって決めてたんだ。[sp]
-@chat_name chara="sabaru"
-うんうん。[sp]
-見る！[w]　ってずっと言ってたよねえ。[sp]
-みかんったら本当に[ruby text="かん"]甘[ruby text="み"]味大好きなんだから。[l][r]
-みかんだけに。[sp]
-@chat_name chara="mikan"
-……[sp]
-@chat_name chara="sora"
-……[sp]
-@chat_name chara="sabaru"
-……[w]すいませんでした。[sp]
-[faname]
-（……[w]さっきのは置いといて、[sw][r]
-さばるも甘いもの大好きだと思うけどなぁ）[sp]
-@if exp="itemData.pring.get == 0"
-手がかり「テレビ」を入手した。[sp]
-@else
-[iget id="tv"]手がかり「テレビ」を入手した。[sp]
-@eval exp="itemData.tv.get = 2"
-@eval exp="itemData.pring.get = 0"
-手がかり「プリン」が統合された。[sp]
-@endif
-@eval exp="f.ima_4_ev = 1"
+    @chat_name chara="sabaru"
+    そういえば、[sw][r]
+    例の録画は見れたの？[sp]
+    @chat_name chara="mikan"
+    ああ、[sw]おかげさまでね。[sp]
+    @chat_name chara="sora"
+    なんの話？[sp]
+    @chat_name chara="mikan"
+    毎週欠かさず見てるスイーツ番組があるんだけど、[sw][r]
+    昨日は準備で忙しくて見れなかったの。[sp]
+    だから、[sw]ちょうどスケジュールの空いた今日の4時に見るって決めてたんだ。[sp]
+    @chat_name chara="sabaru"
+    うんうん。[sp]
+    見る！[w]　ってずっと言ってたよねえ。[sp]
+    みかんったら本当に[ruby text="かん"]甘[ruby text="み"]味大好きなんだから。[l][r]
+    みかんだけに。[sp]
+    @chat_name chara="mikan"
+    ……[sp]
+    @chat_name chara="sora"
+    ……[sp]
+    @chat_name chara="sabaru"
+    ……[w]すいませんでした。[sp]
+    [faname]
+    （……[w]さっきのは置いといて、[sw][r]
+    さばるも甘いもの大好きだと思うけどなぁ）[sp]
+    [iget id="tv"]手がかり「テレビ」を入手した。[sp]
+    @if exp="itemData.pring.get != 0"
+        @eval exp="itemData.tv.get = 2"
+        @eval exp="itemData.pring.get = 0"
+        手がかり「プリン」が統合された。[sp]
+    @endif
+    @eval exp="f.ima_4_ev = 1"
 @endif
 @jump target="*end"
 
