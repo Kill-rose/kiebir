@@ -105,10 +105,13 @@
 [bgadv st="ima.png"]
 
 @if exp="f.ev_ima != 1"
+    @chara_show name="mikan" layer="3" face="nirami"
     [winame]
     @chat_name chara="mikan"
     ……[w]誰だ……[w][r]
     いったい誰が……！[sp]
+    @chara_hide_all layer="3"
+    @chara_show name="sabaru" layer="3"
     @chat_name chara="sabaru"
     ひええ、[sw]大変なことになっちゃった！[sp]
     @chat_name chara="ayashi"

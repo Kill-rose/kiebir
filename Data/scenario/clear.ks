@@ -31,9 +31,10 @@
 
 @chara_new name="sora" storage="chara/mikan/default.png" jname="そらみ"
 @chara_new name="mikan" storage="chara/mikan/default.png" jname="みかん"
+@chara_face name="mikan" storage="chara/mikan/nirami.png" face="nirami"
 @chara_new name="ayashi" storage="chara/mikan/default.png" jname="あやし"
-@chara_new name="rokisa" storage="chara/mikan/default.png" jname="ろきさ"
-@chara_new name="sabaru" storage="chara/mikan/default.png" jname="さばる"
+@chara_new name="rokisa" storage="chara/rokisa/A.png" jname="ろきさ"
+@chara_new name="sabaru" storage="chara/rokisa/A.png" jname="さばる"
 
 
 

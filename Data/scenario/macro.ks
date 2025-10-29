@@ -198,12 +198,7 @@ tf.py = 52
 tf.i = -1
 @endscript
 *moveList_loop
-;次の場所を探す　なければ終了
-;movelistの中身を順番で見て、getが1なら表示する
-;1こもなかったら終わる
-;tf.i == f.moveList.lengthは、==じゃなくて以上のほうがいいかも
 @eval exp="tf.i += 1"
-;[faname][emb exp="tf.i"][emb exp="f.moveList[tf.i]"][sp][hidemess]
 @jump cond="tf.i >= f.moveList.length" target="*moveList_end"
 @jump cond="f.placeData[f.moveList[tf.i]].get != 1" target="*moveList_loop"
 @eval exp="tf.place = f.moveList[tf.i]"
@@ -211,18 +206,26 @@ tf.i = -1
 @eval exp="tf.y += tf.py"
 [ptext layer="8" text="&tf.place_j" x="&tf.x" y="&tf.y" size="29" color="white" align="left" overwrite="true" width="130" name="&tf.place" ]
 @layopt layer="8" visible=true
-[if exp="f.nowPlace == tf.place"]
-    ;現在地のアイコン
-    @eval exp="tf.x2 = tf.x - 35"
-    @eval exp="tf.y2 = tf.y - 5"
-    @image layer="8" storage="place.png" folder="image" left="&tf.x2" top="&tf.y2" page="fore" visible="true" name="nowplace"
-[else]
-    ;現在地以外はクリックして移動できる
-    [locate x="&tf.x" y="&tf.y"]
-    [clickable opacity="255"  storage="scene1.ks" width="130" height="50" target="&tf.place" ]
-[endif]
+
+;現在地かどうかで分岐
+@jump cond="f.nowPlace == tf.place" target="*moveList_nowplace"
+@jump target="*moveList_other"
+
+*moveList_nowplace
+;現在地のアイコン
+@eval exp="tf.x2 = tf.x - 35"
+@eval exp="tf.y2 = tf.y - 5"
+@image layer="8" storage="place.png" folder="image" left="&tf.x2" top="&tf.y2" page="fore" visible="true" name="nowplace"
 @jump target="*moveList_loop"
+
+*moveList_other
+;現在地以外はクリックして移動できる
+[locate x="&tf.x" y="&tf.y"]
+[clickable opacity="255"  storage="scene1.ks" width="130" height="50" target="&tf.place" ]
+@jump target="*moveList_loop"
+
 *moveList_end
+
 
 [endmacro]
 
